@@ -125,7 +125,7 @@ mkdir -p analysis/variants
 
 cd analysis/variants
 
-NB: SE USO CROMOSOMA 22 ALLORA CAMBIA NUMERO NEL PATH
+NB: SE USO CROMOSOMA 21 ALLORA CAMBIA NUMERO NEL PATH
 
 gatk --java-options "-Xmx4g" HaplotypeCaller  \
    -R /config/workspace/datiesame/reference_chr22/sequence/Homo_sapiens_assembly38_chr22.fasta \
@@ -143,7 +143,7 @@ gatk --java-options "-Xmx4g" HaplotypeCaller  \
 
 mkdir -p tmp         (NON DEVO ENTRARCI)
 
-NB: SE USO CROMOSOMA 22 ALLORA CAMBIA NUMERO NEL PATH
+NB: SE USO CROMOSOMA 21 ALLORA CAMBIA NUMERO NEL PATH
 
 gatk --java-options "-Xmx4g -Xms4g" GenomicsDBImport \
       -V normal.g.vcf.gz \
