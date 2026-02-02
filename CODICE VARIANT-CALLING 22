@@ -31,10 +31,25 @@ mkdir -p raw_data
 
 cd raw_data
 
-spacchetto i dati: tar -xvzf data_resequencing.tar.gz -C .
+spacchetto i dati: tar -xvzf /config/workspace/datiesame/data_resequencing.tar.gz -C .   (SE SONO IN RAW_DATA, quindi cd raw_data allora metto il percorso di dove mi deve
 
-(metto il punto dopo C , perchè gli sto dicendo di spacchettare i file dove mi trovo, ossia in raw_data. 
-Se mi trovassi in analysis, ma volevo spacchettare in raw_data allora: tar -xvzf data_rnaseq.tar.gz -C raw_data/ )
+                                                                                                               prendere i dati da spacchettare e metterli dove mi trovo quindi metto il
+
+                                                                                                               punto dopo C , perchè gli sto dicendo di spacchettare i file dove mi trovo)
+
+
+
+tar -xvzf data_resequencing.tar.gz -C raw_data/                     (SE SONO IN DATIESAME, quindi cd datiesame non scrivo il percorso perché sono già nella cartella in cui ho i file che 
+
+                                                                     voglio spacchettare in raw_data. IN QUESTO CASO NON CREO LA CARTELLA ANALYSIS, MA DIRETTAMENTE raw_data come 
+                                                                            
+                                                                     sottocartella di datiesame, quindi cd datiesame poi  mkdir-p raw_data poi 
+
+                                                                     tar -xvzf data_resequencing.tar.gz -C raw_data/  ) ALTRIMENTI IL PATH NON FUNZIONA.
+
+
+
+
 
 ls -l (vedo se ci sono sotto raw_data i files fastq di caso e controllo)
 
